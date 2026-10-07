@@ -2,9 +2,9 @@ package me.waleks.simplematerialgenerators;
 
 
 import com.github.drakescraft_labs.labupdate.DrakesLabsReleaseUpdate;
-import com.github.drakescraft_labs.slimefun4.api.SlimefunAddon;
-import com.github.drakescraft_labs.slimefun4.libraries.dough.config.Config;
-import com.github.drakescraft_labs.slimefun4.libraries.dough.updater.GitHubBuildsUpdater;
+import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.updater.GitHubBuildsUpdater;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import javax.annotation.Nonnull;
