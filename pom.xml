@@ -347,20 +347,33 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>3.6.2</version>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.14.0</version>
                 <configuration>
+                    <release>${maven.compiler.release}</release>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>${maven.shade.plugin.version}</version>
+                <configuration>
+                    <createDependencyReducedPom>false</createDependencyReducedPom>
                     <relocations>
                         <relocation>
-                            <pattern>com.github.drakescraft_labs.cscorelib2</pattern>
-                            <shadedPattern>me.waleks.simplematerialgenerators.cscorelib2</shadedPattern>
+                            <pattern>org.bstats</pattern>
+                            <shadedPattern>me.waleks.simplematerialgenerators.bstats</shadedPattern>
                         </relocation>
                     </relocations>
-                    <filters>
-                        <!-- No point including the entire CS-CoreLib2 so let's only include the needed files -->
-                        <include>**/thebusybiscuit/cscorelib2/blocks/**</include>
-                    </filters>
                 </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
