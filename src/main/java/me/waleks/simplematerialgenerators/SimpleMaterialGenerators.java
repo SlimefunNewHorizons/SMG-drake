@@ -1,7 +1,6 @@
 package me.waleks.simplematerialgenerators;
 
 
-import com.github.drakescraft_labs.labupdate.DrakesLabsReleaseUpdate;
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.updater.GitHubBuildsUpdater;
@@ -16,8 +15,6 @@ public class SimpleMaterialGenerators extends JavaPlugin implements SlimefunAddo
 
     @Override
     public void onEnable() {
-        DrakesLabsReleaseUpdate.schedule(this, "SimpleMaterialGenerators-drake");
-
         setInstance(this);
 
         Config cfg = new Config(this);
